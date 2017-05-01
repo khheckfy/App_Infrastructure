@@ -14,5 +14,13 @@ namespace App_Infrastructure.Data.EntityFramework.Repositories
             : base(context)
         {
         }
+
+        public IQueryable<Order> ListByDate(DateTime from, DateTime to)
+        {
+            return Set
+                .Where(n => n.OrderDate >= from)
+                .Where(n => n.OrderDate <= to)
+                .AsQueryable();
+        }
     }
 }

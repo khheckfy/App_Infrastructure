@@ -10,6 +10,7 @@ namespace App_Infrastructure
     {
         static void Main(string[] args)
         {
+            
         }
     }
 }
